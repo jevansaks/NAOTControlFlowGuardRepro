@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NAOTControlFlowGuardRepro", "NAOTControlFlowGuardRepro.csproj", "{AE1B1691-F3AA-47B4-97C9-19000B90CA01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE1B1691-F3AA-47B4-97C9-19000B90CA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1B1691-F3AA-47B4-97C9-19000B90CA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1B1691-F3AA-47B4-97C9-19000B90CA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1B1691-F3AA-47B4-97C9-19000B90CA01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DBDF457-55F7-4900-9752-E8E02313664D}
+	EndGlobalSection
+EndGlobal

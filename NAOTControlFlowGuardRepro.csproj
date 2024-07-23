@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <CsWinRTComponent>true</CsWinRTComponent>
+        <PublishAot>true</PublishAot>
+
+        <RuntimeIdentifier>win-$(Platform)</RuntimeIdentifier>
+
+        <!-- Reduces binary size -->
+        <UseSystemResourceKeys>true</UseSystemResourceKeys>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <OptimizationPreference>Size</OptimizationPreference>
+        <StackTraceSupport>false</StackTraceSupport>
+
+        <!-- Enable generating files to inspect the binary size with sizoscope (https://github.com/MichalStrehovsky/sizoscope) -->
+        <IlcGenerateMstatFile>true</IlcGenerateMstatFile>
+        <IlcGenerateDgmlFile>true</IlcGenerateDgmlFile>
+
+
+        <!-- Don't collapse analyzer warnings to a single useless one  -->
+        <TrimmerSingleWarn>false</TrimmerSingleWarn>
+
+        <!-- Get better CsWinRT logging -->
+        <ReportAnalyzer>true</ReportAnalyzer>
+        <CsWinRTEnableLogging>true</CsWinRTEnableLogging>
+
+        <!--Enable Control Flow Guard (see: https://msdn.microsoft.com/en-us/library/dn919635.aspx).-->
+        <ControlFlowGuard>Guard</ControlFlowGuard>
+
+        <PlatformVersion>10.0.22621.0</PlatformVersion>
+        <PlatformMinVersion>10.0.18362.0</PlatformMinVersion>
+
+        <!-- Windows SDK Versions -->
+        <TargetPlatformVersion Condition="'$(TargetPlatformVersion)' == ''">$(PlatformVersion)</TargetPlatformVersion>
+        <TargetPlatformMinVersion>$(PlatformMinVersion)</TargetPlatformMinVersion>
+        <TargetFramework>net8.0-windows$(TargetPlatformVersion)</TargetFramework>
+
+        <!-- Platform definitions -->
+        <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+        <Platforms>x64;arm64</Platforms>
+        <RuntimeIdentifiers>win-x64;win-arm64</RuntimeIdentifiers>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Windows.CsWinRT" Version="2.1.0-prerelease.240602.1" />
+    </ItemGroup>
+
+</Project>
