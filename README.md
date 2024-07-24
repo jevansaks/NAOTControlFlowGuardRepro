@@ -2,7 +2,7 @@ To repro:
 
 1. `dotnet publish .\NAOTControlFlowGuardRepro.sln -r win-x64 -c Release`
 2. `dumpbin /symbols .\obj\Release\net8.0-windows10.0.22621.0\win-x64\native\NAOTControlFlowGuardRepro.obj /rawdata:4 > repro.syms.txt`
-3. `dumpbin /symbols .\obj\Release\net8.0-windows10.0.22621.0\win-x64\native\NAOTControlFlowGuardRepro.obj > repro.syms.txt`
+3. `dumpbin '/section:.gfids$y' .\obj\Release\net8.0-windows10.0.22621.0\win-x64\native\NAOTControlFlowGuardRepro.obj /rawdata:4 > repro.gfids`
 4. `findstr /sip DllCanUnloadNow repro.syms.txt`
 
 Observe:

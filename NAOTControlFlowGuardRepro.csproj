@@ -7,12 +7,10 @@
         <CsWinRTComponent>true</CsWinRTComponent>
         <PublishAot>true</PublishAot>
 
-        <RuntimeIdentifier>win-$(Platform)</RuntimeIdentifier>
-
         <!-- Reduces binary size -->
         <UseSystemResourceKeys>true</UseSystemResourceKeys>
         <InvariantGlobalization>true</InvariantGlobalization>
-        <OptimizationPreference>Size</OptimizationPreference>
+        <!--<OptimizationPreference>Size</OptimizationPreference>-->
         <StackTraceSupport>false</StackTraceSupport>
 
         <!-- Enable generating files to inspect the binary size with sizoscope (https://github.com/MichalStrehovsky/sizoscope) -->
